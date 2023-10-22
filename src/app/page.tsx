@@ -11,6 +11,10 @@ const HomePage: React.FC = () => {
     router.push("/products")
   }
 
+  const handAddingNewProduct = () => {
+    router.push("/admin")
+  }
+
   return (
     <div className={styles.container}>
       <h1 className={styles.welcome}>Welcome to the shop</h1>
@@ -23,6 +27,13 @@ const HomePage: React.FC = () => {
           Start shopping
         </button>
       </div>
+      <button
+        className={styles.startShoppingButton}
+        onClick={handAddingNewProduct}
+        type="button"
+      >
+        Adding new Product
+      </button>
     </div>
   )
 }
